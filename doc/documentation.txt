@@ -1,0 +1,74 @@
+Colin Stevens
+18116377
+May 4, 2017
+
+FINAL PROJECT DOCUMENTATION
+===========================
+URL: http://ec2-52-43-96-131.us-west-2.compute.amazonaws.com/finalProj/index.php
+
+LOGINS:
+    (Note, Canvas documentation says to make the grading login have a username of 'test', however my project uses emails as logins. Therefore
+     I have modified it slightly)
+    - Test user
+        * username(email) : test@test
+        * password : pass
+    - Admin user
+        * username(email) : admin@admin.com
+        * password : foobar
+        
+FOLDERS:
+    - includes : various static or commonly used html elements (like the menu or the common <head> elements)
+    - util : php files that provide the server functionality (login, JSON versions of DB rows, etc.)
+    - src : Holds the CSS, JS, and image files that are statically linked by the other pages
+
+FILES:
+    - about.php : The about tab on the website
+    - admin.php : The admin tab on the website
+    - contact.php : The contact tab on the website
+    - index.php : Website main page
+    - post.php : Page used for making new discussion posts
+    - createTables.sql : Shows how the DB tables were created
+    - documentation.txt : This file
+    - screenshot.png : Screenshot of site with clock in the bottom right
+
+WHERE TO FIND THINGS:
+    1. (DOCTYPE and 5 required tags). Included on all html pages. For example, on index.php:
+        * DOCTYPE : Line 1
+        * <html> : Line 2
+        * <head> : Line 3
+        * <title> : Line 6
+        * <body> : Line 89
+        * <meta charset="utf-8"> Can be found in includes/globalHead.html on line 1.
+    2. (Consistent design interface). Note the equivalent size of the content on all the tabs (index.php, post.php, about.php, contact.php, admin.php), as well as the shared header.
+    3. (Well Organized). Repeated <head> items were seperated into includes/globalHead.html and added with PHP to each html file at render time. Similarly, see includes/menu.php.
+    4. (Logged in, private/public features)
+        * Functions only accessibly while logged in: post.php will prevent form submissions if the user is not logged in.
+        * Public & Private content: Most data is public, but the admin tools are strictly unavailable from view to anyone not logged in (regardless of admin status).
+        * Visual cue of being logged in: The upper right of the site header while logged in will display the user's name and provide a log out link.
+        * Ability to log out: See above.
+        * Logged out users cannot access "logged in" content: If a user logs out, they will no longer be able to make posts with post.php, or rate posts.
+    5. (Logins). See the LOGINS section earlier in this document.
+    6. (PHP utlization). Nearly entire project is written with at least some PHP elements. Files strictly in PHP are located in util/.
+    7. (Use of GET and POST). Multiple occurances:
+        * GET Usage: One example is on index.php line 110.
+        * POST Usage: One example is on post.php line 45.
+    8. (Use of form elements). post.php utilizes a form for entering discussion post data. Likewise, the "Register" modal (accessed in the top right of the menu while logged out) uses a form as well.
+    9. (Server feedback). Several occurances, a few examples:
+        * post.php : If the user is not logged in, an error message will be displayed.
+        * post.php : On successful posting, a message is displayed.
+        * any of the tabs : If the user attempts to log in and their credentials are not valid, an error is displayed.
+        * any of the tabs (while logged out) : If the user attempts to register an there are issues (like passwords not matching), an error is displayed.
+    10. (Use of images). See the image gallery found in the "About" tab (about.php).
+    11. (Use of video). See the video gallery found in the "About tab (about.php).
+    12. (Use of Javascript). Several places. For example in admin.php on line 18.
+    13. (Use of jQuery). Several places. For example in index.php line 17. Likewise, the javascript files found in src/js/.
+    14. (Use of Bootstrap UI elements). Bootstrap was not used, but instead an extremely similar project called Semantic UI (https://semantic-ui.com/) was used. This was approved by
+        Prof. Wergeles in person and email. Use of this for interface elements is present on all user-facing pages (for example, all tabs).
+    15. (AJAX utlization). Several places. For example in post.php on line 45.
+    
+FINAL NOTES
+    I have made great effort to make the layout of this project sane and easy to parse through, even without prior experience with it (no spaghetti code, etc.). I believe I have accomplished all project goals at least to original specification and have completed a 100% on this assignment. IF YOU CANNOT FIND SOMETHING OR BELIEVE ME TO BE INCORRECT: Please contact me (see below) and I will be more than happy to assist you quickly, as I know you are extremely busy getting all of this grading done. Afterall, it's my hope to have grading this assignment done as quick as possible for both of us.
+
+CONTACT
+    Mail: [redacted]
+    Phone: [redacted]

@@ -1,0 +1,24 @@
+/* Global CSS rules for the header */
+.masthead .ui.menu .ui.button { /* Padding between "Logged in User" and "Log out" button */
+    margin-left: 15px;
+}
+.secondary.pointing.menu .toc.item { /* Semantic automatically adds a 'menu' icon to menus. Since the menu is small, just disable it */
+    display: none;
+}
+
+#loginForm,#registerForm {
+    padding: 25px;
+}
+
+/* Global CSS rules for the footer */
+.footer.segment {
+    padding: 50px 0px;
+}
+
+/* Other global CSS rules */
+
+#mainContainer {
+    width: 65%; 
+    margin: 20px auto 20px auto; 
+    padding: 10px
+}

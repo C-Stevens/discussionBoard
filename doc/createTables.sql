@@ -1,0 +1,19 @@
+CREATE TABLE users(
+    userID MEDIUMINT NOT NULL AUTO_INCREMENT,
+    password CHAR(40) NOT NULL,
+    displayName VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    isAdmin BOOT DEFAULT 0,
+    PRIMARY KEY ( userID )
+);
+
+CREATE TABLE posts( 
+    title VARCHAR(500) NOT NULL, 
+    postID INT NOT NULL AUTO_INCREMENT, 
+    rating SMALLINT NOT NULL DEFAULT 0, 
+    postTime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    content LONGTEXT NOT NULL, 
+    author MEDIUMINT NOT NULL, 
+    PRIMARY KEY (postID), 
+    FOREIGN KEY (author) REFERENCES users(userID) 
+);

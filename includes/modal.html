@@ -1,0 +1,44 @@
+<div class="ui small modal" id="loginModal">
+    <div class="header">Log in</div>
+    <form method=POST" class="ui form" id="loginForm">
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="user@example.com" required>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="password" required>
+        </div>
+        <button class="ui button" id="loginSubmit" name="loginSubmit" type="submit">Submit</button>
+        <div class="ui error message">
+            <div class="header">Login failed</div>
+            <p id="loginErrorMessageText"></p>
+        </div>
+    </form>
+</div>
+<div class="ui small modal" id="registerModal">
+    <div class="header">Sign up</div>
+    <form method="POST" class="ui form" id="registerForm">
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="user@example.com" id="registerEmailField" required>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="password" id="registerPasswordField" required>
+        </div>
+        <div class="field">
+            <label>Confirm Password</label>
+            <input type="password" name="passwordConfirm" required>
+        </div>
+        <div class="field">
+            <label>Display Name</label>
+            <input type="text" name="displayName" placeholder="John Doe" required>
+        </div>
+        <button class="ui button" id="registerSubmit" name="registerSubmit" type="submit">Submit</button>
+        <div class="ui error message">
+            <div class="header">Registration failed</div>
+            <p id="registerErrorMessageText"></p>
+        </div>
+    </form>
+</div>
